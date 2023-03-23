@@ -1,0 +1,15 @@
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\bin\Debug\net8.0\Sem1Task03.exe
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\bin\Debug\net8.0\Sem1Task03.deps.json
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\bin\Debug\net8.0\Sem1Task03.runtimeconfig.json
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\bin\Debug\net8.0\Sem1Task03.dll
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\bin\Debug\net8.0\Sem1Task03.pdb
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.csproj.AssemblyReference.cache
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.AssemblyInfoInputs.cache
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.AssemblyInfo.cs
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.csproj.CoreCompileInputs.cache
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.dll
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\refint\Sem1Task03.dll
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.pdb
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\Sem1Task03.genruntimeconfig.cache
+C:\Users\Ivanlogin888\Desktop\GEEKBRAINS\C#\Gr4148-LoginIS-\Sem1Task03\obj\Debug\net8.0\ref\Sem1Task03.dll
