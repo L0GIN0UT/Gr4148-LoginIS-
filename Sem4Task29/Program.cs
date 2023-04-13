@@ -8,39 +8,73 @@
 // случайного имени метод Random.Next(1,<длина массива имен>+1).
 
 
-// Массив из N Элементов
+// // Массив из N Элементов
+// // Ввод числа
+// int ReadData(string msg)
+// {
+//     Console.Write(msg);
+//     int res = int.Parse(Console.ReadLine() ?? "0");
+//     return res;
+// }
+
+// //Метод печати одномерного массива
+// void Print1Darray(int []arr)
+// {
+//     Console.Write("[");
+//     for(int i = 0; i<arr.Length-1; i++)
+//     {
+//         Console.Write(arr[i]+",");
+//     }
+//     Console.WriteLine(arr[arr.Length-1] + "]");
+// }
+
+// //Заполнение массива
+// int[] Gen1DArray(int len)
+// {
+//     int[] res=new int[len];
+//     for(int i=0; i<len; i++)
+//     {
+//         res[i]= new Random().Next(-999, 1000);
+//     }
+//     return res;
+// }
+
+// int lenArr = ReadData("Введите длину массива: ");
+// int[] arr = Gen1DArray(lenArr);
+// Print1Darray(arr);
+
+
+//Задание со звездочкой
+
 // Ввод числа
-int ReadData(string msg)
+string[] ReadData(string msg)
 {
     Console.Write(msg);
-    int res = int.Parse(Console.ReadLine() ?? "0");
+    string? names = Console.ReadLine();
+    string[] res = names.Split(' ');
     return res;
 }
 
 //Метод печати одномерного массива
-void Print1Darray(int []arr)
+void Print1Darray(string[] arr)
 {
     Console.Write("[");
-    for(int i = 0; i<arr.Length-1; i++)
+    for (int i = 0; i < arr.Length - 1; i++)
     {
-        Console.Write(arr[i]+",");
+        Console.Write(arr[i] + ",");
     }
-    Console.WriteLine(arr[arr.Length-1] + "]");
+    Console.WriteLine(arr[arr.Length - 1] + "]");
 }
 
-//Заполнение массива
-int[] Gen1DArray(int len)
+string PersonChoose(string[] arr)
 {
-    int[] res=new int[len];
-    for(int i=0; i<len; i++)
-    {
-        res[i]= new Random().Next(-999, 1000);
-    }
-    return res;
+    int i = new Random().Next(0, arr.Length);
+    return arr[i];
 }
 
-int lenArr = ReadData("Введите длину массива: ");
-int[] arr = Gen1DArray(lenArr);
-Print1Darray(arr);
+string[] arrayNames = ReadData("Введите имена через пробел !!!Используя Транслитерат!!!: ");
+Print1Darray(arrayNames);
+string res = PersonChoose(arrayNames);
+Console.WriteLine(res);
 
 
