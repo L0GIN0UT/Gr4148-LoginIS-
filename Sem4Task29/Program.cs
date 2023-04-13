@@ -46,7 +46,7 @@
 
 //Задание со звездочкой
 
-// Ввод числа
+// Ввод списка имен и его разделение
 string[] ReadData(string msg)
 {
     Console.Write(msg);
@@ -66,6 +66,7 @@ void Print1Darray(string[] arr)
     Console.WriteLine(arr[arr.Length - 1] + "]");
 }
 
+//Метод выбора случайного имени
 string PersonChoose(string[] arr)
 {
     int i = new Random().Next(0, arr.Length);
