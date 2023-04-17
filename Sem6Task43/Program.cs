@@ -125,14 +125,16 @@ double[] LineData3 = LineData(Line3);
 
 if (IntersectLines(LineData1, LineData2,LineData3))
 {
-    double[] coord = FindCoords(LineData1, LineData2,LineData3);
+    double[] coord1 = FindCoords1(LineData1, LineData2);
     Console.WriteLine($"Точка пересечений уравнений Y = {LineData1[coef]}*X+{LineData1[con]} /n Y= {LineData2[coef]}*X+{LineData2[con]}");
-    Console.WriteLine($"Имеет координаты ({coord[X1]}, {coord[Y1]})");
+    Console.WriteLine($"Имеет координаты ({coord1[X1]}, {coord1[Y1]})");
+    double[] coord2 = FindCoords2(LineData2, LineData3);
     Console.WriteLine($"Точка пересечений уравнений Y = {LineData2[coef]}*X+{LineData2[con]} /n Y= {LineData3[coef]}*X+{LineData3[con]}");
-    Console.WriteLine($"Имеет координаты ({coord[X2]}, {coord[Y2]})");
+    Console.WriteLine($"Имеет координаты ({coord2[X2]}, {coord2[Y2]})");
+    double[] coord3 = FindCoords3(LineData1, LineData3);
     Console.WriteLine($"Точка пересечений уравнений Y = {LineData1[coef]}*X+{LineData1[con]} /n Y= {LineData3[coef]}*X+{LineData3[con]}");
-    Console.WriteLine($"Имеет координаты ({coord[X3]}, {coord[Y3]})");
-
+    Console.WriteLine($"Имеет координаты ({coord3[X3]}, {coord3[Y3]})");
+    Console.WriteLine($"Площадь треугольника = {(1/2) * (Math.Abs((coord2[X2] - coord1[X1])*(coord3[Y3]-coord3[Y1]) - (coord3[X3] - coord1[X1])*(coord2[Y2]-coord1[Y1])))}");
 }
 
 //Ввод числа
@@ -154,18 +156,48 @@ double[] LineData(int NumOfLines)
 }
 
 //Поиск координат
-double[] FindCoords(double[] LineData1, double[] LineData2, double[] LineData3)
+double[] FindCoords1(double[] LineData1, double[] LineData2)
 {
-    double[] coord = new double[6];
-    coord[X1] = (LineData1[con] - LineData2[con]) / (LineData2[coef] - LineData1[coef]);
-    coord[Y1] = LineData1[coef] * coord[X1] + LineData1[con];
-    coord[X2] = (LineData2[con] - LineData3[con]) / (LineData3[coef] - LineData2[coef]);
-    coord[Y2] = LineData1[coef] * coord[X2] + LineData1[con];
-    coord[X3] = (LineData3[con] - LineData1[con]) / (LineData1[coef] - LineData3[coef]);
-    coord[Y3] = LineData1[coef] * coord[X3] + LineData1[con];
-    return coord;
+    double[] coord1 = new double[2];
+    coord1[X1] = (LineData1[con] - LineData2[con]) / (LineData2[coef] - LineData1[coef]);
+    coord1[Y1] = LineData1[coef] * coord1[X1] + LineData1[con];
+    return coord1;
 }
 
+double[] FindCoords2(double[] LineData2, double[] LineData3)
+{
+    double[] coord2 = new double[2];
+    coord2[X2] = (LineData2[con] - LineData3[con]) / (LineData3[coef] - LineData2[coef]);
+    coord2[Y2] = LineData1[coef] * coord2[X2] + LineData1[con];
+    return coord2;
+}
+
+double[] FindCoords3(double[] LineData1, double[] LineData3)
+{
+    double[] coord3 = new double[2];
+    coord3[X3] = (LineData3[con] - LineData1[con]) / (LineData1[coef] - LineData3[coef]);
+    coord3[Y3] = LineData1[coef] * coord3[X3] + LineData1[con];
+    return coord3;
+}
+//метод записи всех координат в ряд
+// double[] FillArray(int X1, int Y1, int X2, int Y2, int X3, int Y3)
+// {
+//     double[] LineData = new double[6];
+//     LineData[X1] = X1;
+//     LineData[Y1] = Y1;
+//     LineData[X2] = X2;
+//     LineData[Y2] = Y2;
+//     LineData[X3] = X3;
+//     LineData[Y3] = Y3;
+// }
+
+//Метод поиска плозади Треугольника
+// double[] SqrTriangle(double[] LineData1, double[] LineData2, double[] LineData3)
+// {   
+//     double [] answer = 0;
+//     answer = new double 1/2 * Math.Abs((LineData2[X2] - LineData1[X1])*(LineData3[Y3]-LineData1[Y1]) - (LineData3[X3] - LineData1[X1])*(LineData2[Y2]-LineData1[Y1]));
+//     return answer; 
+// }
 //Проверка на пересечение прямых
 bool IntersectLines(double[] LineData1, double[] LineData2, double[] LineData3)
 {
