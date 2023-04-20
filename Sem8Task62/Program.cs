@@ -1,4 +1,7 @@
-﻿Console.Clear();
+﻿// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+// Например, на выходе получается вот такой массив:
+
+Console.Clear();
 
 //Метод ввода 
 int ReadData(string msg)
@@ -116,7 +119,7 @@ void Print2DSpiralarray(int[,] arr)
     }
 }
 
-int m = ReadData("Enter number of rows: ");
-int n = ReadData("Enter number of columns: ");
+int m = ReadData("Введите количество строк: ");
+int n = ReadData("Введите количество столбцов: ");
 int[,] arr = Gen2DSpiralArray(m, n, m, n);
 Print2DSpiralarray(arr);
